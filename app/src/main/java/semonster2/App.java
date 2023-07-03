@@ -9,6 +9,14 @@ public class App {
     }
 
     public static void main(String[] args) {
+
+        Monster monster = new Monster("デュラハン",0);
         System.out.println(new App().getGreeting());
+
+        System.out.println(monster.toString());
+
+
+
+
     }
 }
