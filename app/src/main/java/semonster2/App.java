@@ -3,20 +3,33 @@
  */
 package semonster2;
 
+import java.util.LinkedList;
+import java.util.Random;
+
 public class App {
+    final static Random random = new Random();
+    final static int maxRandomNumber = 4;
+
     public String getGreeting() {
         return "こんにちは SEMonster!";
     }
 
+    public static LinkedList<Integer> createRandomList(int count){
+        LinkedList<Integer> randomNumberList = new LinkedList<>();
+        for (int i=0;i<count;i++){
+            randomNumberList.add(random.nextInt(maxRandomNumber + 1));
+        }
+        return randomNumberList;
+    }
+
     public static void main(String[] args) {
-
         Monster monster = new Monster("デュラハン",0);
+        //Monster monster = new Monster(4,0);
+        Player player = new Player("user", createRandomList(10));
+        player.putMonsters();
+
         System.out.println(new App().getGreeting());
-
         System.out.println(monster.toString());
-
-
-
-
+        System.out.println(player.toString());
     }
 }
