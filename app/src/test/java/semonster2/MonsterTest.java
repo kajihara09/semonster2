@@ -7,18 +7,18 @@ public class MonsterTest {
 
     @Test
     public void TestToString1() {
-        Monster monster = new Monster("デュラハン",0);
+        Monster monster = new Monster("デュラハン", 0);
         assertEquals("デュラハン:レア度[0]\n", monster.toString());
     }
 
     @Test
     public void TestToString2() {
-        Monster monster = new Monster("デュラハン",3);
-        assertEquals("強・デュラハン:レア度[0]\n", monster.toString());
+        Monster monster = new Monster("デュラハン", 3);
+        assertEquals("強・デュラハン:レア度[3]\n", monster.toString());
     }
 
     @Test
-    public void TestToString2() {
+    public void TestToString3() {
         Monster monster = new Monster(4, 0);
         assertEquals("シーサーペント:レア度[0]\n", monster.toString());
     }
