@@ -26,7 +26,7 @@ public class App {
         Monster monster = new Monster("デュラハン",0);
         //Monster monster = new Monster(4,0);
         Player player = new Player("user", createRandomList(10));
-        player.putMonsters();
+        // player.putMonsters();
 
         System.out.println(new App().getGreeting());
         System.out.println(monster.toString());

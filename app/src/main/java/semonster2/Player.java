@@ -16,19 +16,19 @@ public class Player {
     //Monster5体入れる
     //Monsterクラスのコンストラクタの引数が(int name_num, int rare_num)であることが前提
     //summmonMonsterメソッドがある前提
-    public void putMonsters(){
-        for(int i=0;i<5;i++){
-            this.monsterDeck.add(new Monster(this.randomNumberList.pop(), this.randomNumberList.pop()));
-        }
-    }
+    // public void putMonsters(){
+    //     for(int i=0;i<5;i++){
+    //         this.monsterDeck.add(new Monster(this.randomNumberList.pop(), this.randomNumberList.pop()));
+    //     }
+    // }
 
     @Override
     public String toString(){
         String deckName = "Deck:" + this.name + "\n";
         String deck = "";
-        for(int i=0;i<5;i++){
-            deck += this.monsterDeck.get(i); 
-        }
+        // for(int i=0;i<5;i++){
+        //     deck += this.monsterDeck.get(i);
+        // }
         return deckName + deck;
     }
 }
