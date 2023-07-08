@@ -23,19 +23,13 @@ public class App {
     }
 
     public static void main(String[] args) {
-      
-      
-        System.out.println(new App().getGreeting());
-
-        Monster monster = new Monster("スライム", 3);
-        System.out.println(monster.toString());
-
-        Monster monster2 = new Monster(0);
-        System.out.println(monster2.toString());
-
-      
+        Monster monster = new Monster("デュラハン",0);
+        //Monster monster = new Monster(4,0);
         Player player = new Player("user", createRandomList(10));
         // player.putMonsters();
+
+        System.out.println(new App().getGreeting());
+        System.out.println(monster.toString());
         System.out.println(player.toString());
     }
 }
