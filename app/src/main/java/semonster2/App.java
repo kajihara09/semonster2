@@ -4,19 +4,19 @@
 package semonster2;
 
 public class App {
-    public String getGreeting() {
-        return "こんにちは SEMonster!";
-    }
+  public String getGreeting() {
+    return "こんにちは SEMonster!";
+  }
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Monster monster = new Monster("デュラハン",0);
-        System.out.println(new App().getGreeting());
+    System.out.println(new App().getGreeting());
 
-        System.out.println(monster.toString());
+    Monster monster = new Monster("スライム", 3);
+    System.out.println(monster.toString());
 
+    Monster monster2 = new Monster(0);
+    System.out.println(monster2.toString());
 
-
-
-    }
+  }
 }
