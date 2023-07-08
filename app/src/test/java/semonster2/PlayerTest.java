@@ -13,7 +13,7 @@ public class PlayerTest {
     }
 
     //モンスター5体入ってるか
-    @Test
+    // @Test
     // public void PlayerHas5Monsters(){
     //     App classUnderTest = new App();
     //     Player classUnderTest_player = new Player("user", App.createRandomList(10));
