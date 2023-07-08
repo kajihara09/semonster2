@@ -7,29 +7,32 @@ import java.util.LinkedList;
 import java.util.Random;
 
 public class App {
-    final static Random random = new Random();
-    final static int maxRandomNumber = 4;
+  final static Random random = new Random();
+  final static int maxRandomNumber = 4;
 
-    public String getGreeting() {
-        return "こんにちは SEMonster!";
+  public String getGreeting() {
+    return "こんにちは SEMonster!";
+  }
+
+  public static LinkedList<Integer> createRandomList(int count){
+    LinkedList<Integer> randomNumberList = new LinkedList<>();
+    for (int i=0;i<count;i++){
+      randomNumberList.add(random.nextInt(maxRandomNumber + 1));
     }
+    return randomNumberList;
+  }
 
-    public static LinkedList<Integer> createRandomList(int count){
-        LinkedList<Integer> randomNumberList = new LinkedList<>();
-        for (int i=0;i<count;i++){
-            randomNumberList.add(random.nextInt(maxRandomNumber + 1));
-        }
-        return randomNumberList;
-    }
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
 
-    public static void main(String[] args) {
-        Monster monster = new Monster("デュラハン",0);
-        //Monster monster = new Monster(4,0);
-        Player player = new Player("user", createRandomList(10));
-        // player.putMonsters();
+    Monster monster1 = new Monster("デュラハン",3);
+    System.out.println(monster1.toString());
 
-        System.out.println(new App().getGreeting());
-        System.out.println(monster.toString());
-        System.out.println(player.toString());
-    }
+    Monster monster2 = new Monster(4, 0);
+    System.out.println(monster2.toString());
+
+    Player player = new Player("user", createRandomList(10));
+    // player.putMonsters();
+    System.out.println(player.toString());
+  }
 }

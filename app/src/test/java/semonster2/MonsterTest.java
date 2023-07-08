@@ -6,8 +6,20 @@ import static org.junit.Assert.*;
 public class MonsterTest {
 
     @Test
-    public void TestToString() {
-        Monster monster = new Monster("デュラハン",0);
+    public void TestToString1() {
+        Monster monster = new Monster("デュラハン", 0);
         assertEquals("デュラハン:レア度[0]\n", monster.toString());
+    }
+
+    @Test
+    public void TestToString2() {
+        Monster monster = new Monster("デュラハン", 3);
+        assertEquals("強・デュラハン:レア度[3]\n", monster.toString());
+    }
+
+    @Test
+    public void TestToString3() {
+        Monster monster = new Monster(4, 0);
+        assertEquals("シーサーペント:レア度[0]\n", monster.toString());
     }
 }
