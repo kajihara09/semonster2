@@ -32,7 +32,7 @@ public class App {
     System.out.println(monster2.toString());
 
     Player player = new Player("user", createRandomList(10));
-    // player.putMonsters();
+    player.putMonsters();
     System.out.println(player.toString());
   }
 }
